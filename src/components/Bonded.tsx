@@ -8,7 +8,7 @@ type BondedProps = {
 };
 
 const Bonded = React.forwardRef<HTMLDivElement, BondedProps>(
-  ({ as: Comp = "Section", className, children, ...restProps }, ref) => {
+  ({ as: Comp = "section", className, children, ...restProps }, ref) => {
     return (
       <Comp
         ref={ref}

@@ -4,6 +4,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Bonded from "@/components/Bonded";
+import Shapes from "./Shapes";
 /**
  * Props for `Hero`.
  */
@@ -72,6 +73,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       ref={component}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh] items-center">
+      <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1
             className="mb-8 text-[clamp(3rem,20vmin,20rem)] font-extrabold leading-none tracking-tighter"
