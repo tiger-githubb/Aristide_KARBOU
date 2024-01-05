@@ -28,14 +28,6 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "avatar": {
-          "type": "Image",
-          "config": {
-            "label": "Avatar",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
         "button_text": {
           "type": "Text",
           "config": {
@@ -49,6 +41,14 @@
             "label": "Button Link",
             "placeholder": "",
             "select": null
+          }
+        },
+        "avatar": {
+          "type": "Image",
+          "config": {
+            "label": "Avatar",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },
