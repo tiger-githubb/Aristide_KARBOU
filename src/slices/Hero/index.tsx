@@ -3,7 +3,7 @@ import { Content, KeyTextField } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import Bonded from "@/components/Bonded";
+import Bounded from "@/components/Bounded";
 import Shapes from "./Shapes";
 /**
  * Props for `Hero`.
@@ -67,7 +67,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
   };
 
   return (
-    <Bonded
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       ref={component}
@@ -93,7 +93,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           </h1>
         </div>
       </div>
-    </Bonded>
+    </Bounded>
   );
 };
 

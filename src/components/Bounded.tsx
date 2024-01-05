@@ -7,7 +7,7 @@ type BondedProps = {
   children?: React.ReactNode;
 };
 
-const Bonded = React.forwardRef<HTMLDivElement, BondedProps>(
+const Bounded = React.forwardRef<HTMLDivElement, BondedProps>(
   ({ as: Comp = "section", className, children, ...restProps }, ref) => {
     return (
       <Comp
@@ -21,6 +21,6 @@ const Bonded = React.forwardRef<HTMLDivElement, BondedProps>(
   }
 );
 
-Bonded.displayName = "Bonded";
+Bounded.displayName = "Bounded";
 
-export default Bonded;
+export default Bounded;
