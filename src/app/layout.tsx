@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { ThemeProvider } from "@/theme/ThemeProvider";
-import ModeToggle from "@/components/modetoggle";
 import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +23,7 @@ export default function RootLayout({
       <body className={clsx(`${inter.className} antialiased`, "bg-background")}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header/>
-          <ModeToggle/>
+          
           {children}
         </ThemeProvider>
       </body>
