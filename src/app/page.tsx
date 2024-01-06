@@ -15,8 +15,6 @@ export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
   const page = await client.getSingle("homepage");
 
-  console.log(page.data.meta_image.url);
-  const url = page.data.meta_image.url;
 
   return {
     title: page.data.meta_title,
