@@ -168,6 +168,7 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ExperienceSlice
   | ContentIndexSlice
   | TechlistSlice
   | BiographySlice;
@@ -712,12 +713,12 @@ export interface ExperienceSliceDefaultItem {
   /**
    * Description field in *Experience → Items*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: experience.items[].description
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.KeyTextField;
+  description: prismic.RichTextField;
 }
 
 /**

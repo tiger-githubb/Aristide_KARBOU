@@ -40,9 +40,15 @@
 					[
 						"description",
 						{
-							"__TYPE__": "FieldContent",
-							"value": "which",
-							"type": "Text"
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Magna est ex enim incididunt aliquip officia irure adipisicing occaecat nulla non. Et adipisicing nostrud cupidatat."
+									}
+								}
+							]
 						}
 					]
 				]
