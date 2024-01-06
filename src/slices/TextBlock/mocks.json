@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"article": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Labore commodo officia labore sit nisi. Proident est labore nulla ea non in aute in aliqua eiusmod eiusmod duis. Dolor commodo ea dolore nulla Lorem."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
