@@ -4,6 +4,7 @@ import "./globals.css";
 import clsx from "clsx";
 import { ThemeProvider } from "@/theme/ThemeProvider";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,8 +24,8 @@ export default function RootLayout({
       <body className={clsx(`${inter.className} antialiased`, "bg-background")}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header/>
-          
           {children}
+          <Footer/>
         </ThemeProvider>
       </body>
     </html>
