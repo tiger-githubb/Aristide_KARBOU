@@ -426,6 +426,28 @@ interface SettingsDocumentData {
   github: prismic.LinkField;
 
   /**
+   * TikTok field in *Settings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.tiktok
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  tiktok: prismic.LinkField;
+
+  /**
+   * Instagram field in *Settings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.instagram
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  instagram: prismic.LinkField;
+
+  /**
    * Twitter field in *Settings*
    *
    * - **Field Type**: Link
@@ -434,7 +456,29 @@ interface SettingsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  twitter: prismic.LinkField /**
+  twitter: prismic.LinkField;
+
+  /**
+   * Aboutme field in *Settings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.aboutme
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  aboutme: prismic.LinkField;
+
+  /**
+   * Discord field in *Settings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.discord
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  discord: prismic.LinkField /**
    * Meta Title field in *Settings*
    *
    * - **Field Type**: Text

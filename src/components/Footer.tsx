@@ -5,7 +5,10 @@ import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import Bounded from "@/components/Bounded";
 import { isFilled } from "@prismicio/client";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
+import { BadgeInfo, GithubIcon, Instagram, InstagramIcon, LinkedinIcon, Speech, TicketIcon, TwitterIcon } from "lucide-react";
+import { DiscordLogoIcon } from "@radix-ui/react-icons";
+import { PiTiktokLogoBold, PiTiktokLogoThin } from "react-icons/pi";
+
 
 export default async function Footer() {
   const client = createClient();
@@ -82,6 +85,43 @@ export default async function Footer() {
               aria-label={settings.data.name + " on LinkedIn"}
             >
               <LinkedinIcon/>
+            </PrismicNextLink>
+          )}
+           {isFilled.link(settings.data.tiktok) && (
+            <PrismicNextLink
+              field={settings.data.tiktok}
+              className="p-2 text-2xl text-primary transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+              aria-label={settings.data.name + " on TikTok"}
+            >
+              <PiTiktokLogoBold />
+              
+            </PrismicNextLink>
+          )}
+           {isFilled.link(settings.data.instagram) && (
+            <PrismicNextLink
+              field={settings.data.instagram}
+              className="p-2 text-2xl text-primary transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+              aria-label={settings.data.name + " on Instagram"}
+            >
+              <InstagramIcon/>
+            </PrismicNextLink>
+          )}
+           {isFilled.link(settings.data.discord) && (
+            <PrismicNextLink
+              field={settings.data.discord}
+              className="p-2 text-2xl text-primary transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+              aria-label={settings.data.name + " on Discord"}
+            >
+              <DiscordLogoIcon/>
+            </PrismicNextLink>
+          )}
+          {isFilled.link(settings.data.aboutme) && (
+            <PrismicNextLink
+              field={settings.data.aboutme}
+              className="p-2 text-2xl text-primary transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+              aria-label={settings.data.name + " on AboutMe"}
+            >
+              <BadgeInfo />
             </PrismicNextLink>
           )}
         </div>
