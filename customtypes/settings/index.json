@@ -67,12 +67,44 @@
           "select": null
         }
       },
+      "tiktok": {
+        "type": "Link",
+        "config": {
+          "label": "TikTok",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "instagram": {
+        "type": "Link",
+        "config": {
+          "label": "Instagram",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "twitter": {
         "type": "Link",
         "config": {
           "label": "Twitter",
           "placeholder": "",
           "allowTargetBlank": false,
+          "select": null
+        }
+      },
+      "aboutme": {
+        "type": "Link",
+        "config": {
+          "label": "Aboutme",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "discord": {
+        "type": "Link",
+        "config": {
+          "label": "Discord",
+          "placeholder": "",
           "select": null
         }
       }
