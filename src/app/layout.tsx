@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={clsx(`${inter.className} antialiased`, "bg-background relative min-h-screen")}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header/>
           {children}
           <div className="background-gradient absolute inset-0 -z-50 max-h-screen" />
