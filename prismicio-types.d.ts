@@ -232,7 +232,7 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-type ProjectDocumentDataSlicesSlice = TextBlockSlice;
+type ProjectDocumentDataSlicesSlice = ProjectDetailsSlice | TextBlockSlice;
 
 /**
  * Content for Project documents
@@ -858,6 +858,77 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *ProjectDetails → Primary*
+ */
+export interface ProjectDetailsSliceDefaultPrimary {
+  /**
+   * Link field in *ProjectDetails → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_details.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Pinned field in *ProjectDetails → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: project_details.primary.pinned
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  pinned: prismic.BooleanField;
+}
+
+/**
+ * Primary content in *ProjectDetails → Items*
+ */
+export interface ProjectDetailsSliceDefaultItem {
+  /**
+   * Image field in *ProjectDetails → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_details.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for ProjectDetails Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProjectDetailsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProjectDetailsSliceDefaultPrimary>,
+  Simplify<ProjectDetailsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ProjectDetails*
+ */
+type ProjectDetailsSliceVariation = ProjectDetailsSliceDefault;
+
+/**
+ * ProjectDetails Shared Slice
+ *
+ * - **API ID**: `project_details`
+ * - **Description**: ProjectDetails
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProjectDetailsSlice = prismic.SharedSlice<
+  "project_details",
+  ProjectDetailsSliceVariation
+>;
+
+/**
  * Primary content in *Techlist → Primary*
  */
 export interface TechlistSliceDefaultPrimary {
@@ -1015,6 +1086,11 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ProjectDetailsSlice,
+      ProjectDetailsSliceDefaultPrimary,
+      ProjectDetailsSliceDefaultItem,
+      ProjectDetailsSliceVariation,
+      ProjectDetailsSliceDefault,
       TechlistSlice,
       TechlistSliceDefaultPrimary,
       TechlistSliceDefaultItem,
