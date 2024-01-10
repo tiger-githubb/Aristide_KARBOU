@@ -27,6 +27,7 @@ const ProjectDetails = ({ slice }: ProjectDetailsProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
+    <div className="md:px-32 px-4">
       <div className="mb-6 flex h-full w-full flex-col items-center justify-center">
         <Carousel
           opts={{
@@ -47,7 +48,7 @@ const ProjectDetails = ({ slice }: ProjectDetailsProps): JSX.Element => {
                   <CardContent className="flex h-full w-full flex-col items-center justify-center justify-items-center">
                     <PrismicImage
                       field={image.image}
-                      className="rounded-md object-cover object-center mb-0"
+                      className="rounded-md object-cover object-center "
                     />
                   </CardContent>
                 </Card>
@@ -60,6 +61,7 @@ const ProjectDetails = ({ slice }: ProjectDetailsProps): JSX.Element => {
         <PrismicNextLink field={slice.primary.link} aria-current={"page"} className="mt-5 text-2xl font-bold text-white hover:text-secondary">
           View the Project
         </PrismicNextLink>
+      </div>
       </div>
     </section>
   );

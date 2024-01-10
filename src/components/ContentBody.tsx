@@ -27,7 +27,7 @@ export default function ContentBody({
             className="h-96 w-full rounded-lg object-cover object-center"
           />
         </div>
-        <h1 className=" text-7xl font-bold leading-tight tracking-tight text-primary text-white md:text-4xl ">
+        <h1 className=" text-3xl font-bold leading-tight tracking-tight text-primary text-white md:text-4xl text-balance ">
           {page.data.title}
         </h1>
         <div className="flex gap-4 text-yellow-400">
