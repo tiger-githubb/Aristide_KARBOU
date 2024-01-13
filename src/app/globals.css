@@ -23,6 +23,10 @@
   border-radius: 14px;
   border: 1px solid var(--primary);
 }
+
+.bg-navhover-color{
+  background-color: #4671FFDB; 
+}
  
 
 @layer base {
@@ -47,6 +51,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+    --navhover-color: 226, 70%, 55%;
   }
 
   .dark {
@@ -69,8 +74,11 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9;
+    --navhover-color:226, 100%, 64%, 0.859;
   }
 }
+
+
 
  
 @layer base {
@@ -85,8 +93,8 @@
 .background-gradient {
   background: radial-gradient(
     circle at top center,
-    hsla(222, 80%, 60%, 0.5) 0%,
-    hsla(222, 0%, 0%, 0) 50%,
-    hsla(222, 0%, 0%, 0) 100%
+    hsla(276, 92%, 34%, 0.521) 0%,
+    hsla(263, 96%, 55%, 0.158) 50%,
+    hsla(253, 100%, 52%, 0) 100%
   );
 }
