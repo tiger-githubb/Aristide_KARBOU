@@ -28,7 +28,7 @@ export default function Button({
     >
       <span
         className={clsx(
-          "absolute inset-0 z-0 h-full translate-y-9 bg-yellow-300 transition-transform  duration-300 ease-in-out group-hover:translate-y-0",
+          "absolute inset-0 z-0 h-full translate-y-9 bg-navhover-color transition-transform  duration-300 ease-in-out group-hover:translate-y-0",
         )}
       />
       <span className="relative flex items-center justify-center gap-2">
