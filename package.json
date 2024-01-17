@@ -44,6 +44,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.15.13",
+    "@splinetool/runtime": "^1.0.28",
     "@types/three": "^0.160.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
