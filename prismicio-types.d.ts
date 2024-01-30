@@ -588,6 +588,46 @@ export interface BiographySliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   avatar: prismic.ImageField<never>;
+
+  /**
+   * Phone number text field in *Biography → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: biography.primary.phone_number_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number_text: prismic.KeyTextField;
+
+  /**
+   * Phone number field in *Biography → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: biography.primary.phone_number
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  phone_number: prismic.LinkField;
+
+  /**
+   * Email text field in *Biography → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: biography.primary.email_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_text: prismic.KeyTextField;
+
+  /**
+   * Email field in *Biography → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: biography.primary.email
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  email: prismic.LinkField;
 }
 
 /**
