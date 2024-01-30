@@ -1,11 +1,10 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
-import { asImageSrc, isFilled } from "@prismicio/client";
+import { Content, asImageSrc, isFilled } from "@prismicio/client";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Content } from "@prismicio/client";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +53,7 @@ export default function ContentList({
               end: "bottom center",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
 
@@ -152,16 +151,18 @@ export default function ContentList({
               aria-label={post.data.title || ""}
             >
               <div className="flex flex-col">
-                <span className="text-3xl font-bold">{post.data.title}</span>
-                <div className="flex gap-3 text-yellow-400">
+                <span className="text-xl font-bold md:text-3xl">
+                  {post.data.title}
+                </span>
+                <div className="mt-2 grid max-w-48 gap-2 text-wrap text-yellow-400 md:flex md:max-w-none">
                   {post.tags.map((tag, index) => (
-                    <span key={index} className="text-lg font-bold">
-                      {tag}
+                    <span key={index} className="text-sm font-bold md:text-lg">
+                      #{tag}
                     </span>
                   ))}
                 </div>
               </div>
-              <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
+              <span className="ml-auto flex content-center items-center gap-2 text-sm font-medium md:ml-0 md:text-xl">
                 {viewMoreText} <ArrowUpRight />
               </span>
             </Link>

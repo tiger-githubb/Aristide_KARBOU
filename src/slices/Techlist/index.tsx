@@ -78,6 +78,7 @@ const Techlist = ({ slice }: TechlistProps): JSX.Element => {
           {Array.from({ length: 15 }, (_, index) => (
             <React.Fragment key={index}>
               <span
+                translate="no"
                 className={
                   "tech-item whitespace-nowrap text-4xl font-extrabold uppercase tracking-tighter md:text-8xl"
                 }
