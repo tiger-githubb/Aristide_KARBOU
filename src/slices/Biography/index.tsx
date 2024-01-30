@@ -24,20 +24,23 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
           {slice.primary.heading}
         </Heading>
 
-        <div className="prose prose-xl prose-stone dark:prose-invert col-start-1">
+        <div className="prose prose-xl prose-stone col-start-1 dark:prose-invert">
           <PrismicRichText field={slice.primary.description} />
         </div>
-       <Button className="text-background"
+        <Button
+          className="text-background"
           linkField={slice.primary.button_link}
           label={slice.primary.button_text}
         />
 
-         <Avatar
+        <Avatar
           image={slice.primary.avatar}
+          phone_number={slice.primary.phone_number}
+          phone_number_text={slice.primary.phone_number_text}
+          email_text={slice.primary.email_text}
+          email={slice.primary.email}
           className="row-start-1 max-w-sm md:col-start-2 md:row-end-3"
         />
-
-        
       </div>
     </Bounded>
   );

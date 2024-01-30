@@ -50,6 +50,38 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "phone_number_text": {
+          "type": "Text",
+          "config": {
+            "label": "Phone number text",
+            "placeholder": ""
+          }
+        },
+        "phone_number": {
+          "type": "Link",
+          "config": {
+            "label": "Phone number",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "email_text": {
+          "type": "Text",
+          "config": {
+            "label": "Email text",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Link",
+          "config": {
+            "label": "Email",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
         }
       },
       "items": {}
